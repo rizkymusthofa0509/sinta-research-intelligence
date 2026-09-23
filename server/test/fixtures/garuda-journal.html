@@ -1,0 +1,1005 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="garuda garba rujukan digital">
+        <meta name="author" content="kementrian riset, teknologi dan pendidikan tinggi">
+        <link rel="icon" href="/assets/img/garuda-icon.png">
+
+        <title>Garuda - Garba Rujukan Digital</title>
+
+        <!-- SEMANTIC UI -->
+        <link href="/assets/semantic/semantic.min.css" rel="stylesheet">
+        <link href="/assets/semantic/components/reset.css" rel="stylesheet"> 
+
+        <link href="/assets/css/main.css" rel="stylesheet">
+        <link href="/assets/css/app.css" rel="stylesheet">
+        <link href="/assets/css/flash-message.css" rel="stylesheet">
+        
+        <!-- JQUERY UI - AUTOCOMPLETE -->
+        <link href="/assets/css/jquery-ui/jquery-ui.css" rel="stylesheet" />
+
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/semantic/semantic.min.js"></script>
+        <script src="/assets/js/jquery.tagcloud.js" type="text/javascript"></script>
+        <script src="/assets/js/Chart.js"></script>
+        <script src="/assets/custom/main.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <!-- JQUERY UI - AUTOCOMPLETE -->
+        <script src="/assets/js/jquery-ui/jquery-ui.min.js"></script>
+    </head>
+
+
+
+    <body>
+                <div class="ui stackable menu top-menu">
+            <a class="header item brand" href="/">
+                 <img src="/assets/img/garuda1.png" alt=""> 
+            </a>
+            <div class="right menu">
+                <a class="nav item " href="/">Home</a>
+                <a class="nav item " href="/publisher">Publisher</a>
+                <a class="nav item active" href="/journal">Journal / Conference</a>
+                <a class="nav item " href="/area">Subject</a>
+                <a class="nav item " href="/suggest">Suggest</a>
+                <a class="nav item" target="_blank" href="https://drive.google.com/drive/folders/19TuyOLkABcMgh99AgLweV-B8BE1wcUl8?usp=sharing">Guidebook</a>
+                <a class="nav item disabled">&nbsp;</a>
+            </div>
+        </div>
+
+        <main role="main" class="container">
+
+<style>
+    #more-issue {display: none;}
+</style>
+
+<div class="clearfix"></div>
+<div class="ui grid stackable stat-box">
+
+</div>
+<div class="ui stackable grid content-wrapper">
+    <div class="ui three wide column">
+        <div class="ui segment">
+            <div class="j-meta-img">
+                <img width="100%" class="ui image rounded" src="/imageview/journal?id=14393&size=" alt="cover" />
+            </div>
+        </div>
+
+        <div class="ui segment padded">
+            <a class="ui top attached label">Article Per Year (5 Year)</a>
+            <div style="height:200px; width:100%">
+                <canvas id="myChart"></canvas>
+            </div>
+            <a class="ui mini fluid button" href="/journal/analysis/14393">All</a>
+        </div>
+    
+        <div class="ui segment padded">
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://ejournal.upnvj.ac.id/index.php/Yuridis/about/contact" target="_blank"><i class="angle right icon"></i>Home Page</a></h5>
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://ejournal.upnvj.ac.id/Yuridis/oai" target="_blank"><i class="angle right icon"></i>OAI Link</a></h5>
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://ejournal.upnvj.ac.id/index.php/Yuridis/about/contact" target="_blank"><i class="angle right icon"></i>Editorial Team</a></h5>
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://ejournal.upnvj.ac.id/index.php/Yuridis" target="_blank"><i class="angle right icon"></i>Contact</a></h5>
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://ejournal.upnvj.ac.id/index.php/Yuridis/about/displayMembership/34" target="_blank"><i class="angle right icon"></i>Reviewer</a></h5>
+            <h5 class="ui header" style="margin: 4px !important;"><a href="https://scholar.google.co.id/citations?user=3UuZ8m0AAAAJ" target="_blank"><i class="angle right icon"></i>Google Scholar</a></h5>
+            
+        </div>
+        <div class="ui segment">
+        <h5 class="ui header">
+                <i class="user outline icon red"></i>
+                <div class="content">
+                    Contact Name
+                    <div class="sub header">Jurnal yuridis</div>
+                </div>
+            </h5>
+            <h5 class="ui header">
+                <i class="mail outline icon red"></i>
+                <div class="content">
+                    Contact Email
+                    <div class="sub header" style="word-break: break-all !important;">yuridis@upnvj.ac.id</div>
+                </div>
+            </h5>
+            <h5 class="ui header">
+                <i class="phone icon red"></i>
+                <div class="content">
+                    Phone
+                    <div class="sub header">+6221-7656971</div>
+                </div>
+            </h5>
+            <h5 class="ui header">
+                <i class="mail outline icon red"></i>
+                <div class="content">
+                    Journal Mail Official
+                    <div class="sub header" style="word-break: break-all !important;">yuridis@upnvj.ac.id</div>
+                </div>
+            </h5>
+            <h5 class="ui header">
+                <i class="marker icon red"></i>
+                <div class="content">
+                    Editorial Address
+                    <div class="sub header">-</div>
+                </div>
+            </h5>
+            <h5 class="ui header">
+                <i class="marker icon red"></i>
+                <div class="content">
+                    Location
+                    <div class="sub header">Kota depok,</div>
+                    <div class="sub header">Jawa barat</div>
+                    <div class="sub header">INDONESIA</div>
+                </div>
+            </h5>
+        </div>
+    </div>
+    <div class="nine wide column">
+        <div class="ui segment j-info-box">
+            <div class="j-meta-title">
+				Jurnal Yuridis			</div>
+            <div class="j-meta-abbrev">
+                <ul>
+                    <li>Yuridis</li>
+                    <li><a target="_blank" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/about/contact"><i class="ui icon globe"></i>Website</a></li>
+                </ul>
+            </div>
+            <div class="j-meta-pub">
+                Published by <a href="#!">Universitas Pembangunan Nasional Veteran Jakarta</a>
+            </div>
+
+            <div class="j-meta-pub">
+                ISSN : <a href="#!">16934458</a> &nbsp;&nbsp;&nbsp;
+                EISSN : <a href="#!">25985906</a> &nbsp;&nbsp;&nbsp;
+                DOI : <a href="#!">-</a>
+            </div>
+            
+            <div class="j-meta-pub">
+                Core Subject : <a href="#!">
+                                    Social,
+                </a>
+            </div>
+            
+            <div class="j-meta-subject">
+                                    <a class="ui tag label grey mini" href="/area/index/137">Law, Crime, Criminology &amp; Criminal Justice</a>
+                            </div>
+
+
+            <div class="j-meta-desc">Jurnal yuridis Fakultas Hukum universitas pembangunan Nasional veteran Jakarta JL. RS. Fatmawati, Pondok Labu - Jakarta Selatan 12450</div>
+            
+            <div class="j-meta-pub" style="font-size: 14px;">
+                Arjuna Subject : 
+                <a href="#!">
+                    Umum - Umum                </a>
+            </div>
+        </div>
+        <div class="ui segment padded article-box">
+            <div class="ui top attached label">Articles 
+                <span style="float: right;">210 Documents</span>
+            </div>
+
+            <div class="ui equal width grid">
+                <div class="column">                    
+                    <form id="form-journal" class="ui form mini search-pub-form" action="" method="GET">
+                                                                                                <div class="inline fields">                            
+                            <div class="fourteen wide field">
+                                <input type="text" name="q" placeholder="Search Title" value="" minlength="3" required>
+                            </div>
+                            <div class="two wide field">
+                                <button class="ui icon button mini red" type="submit"><i class="icon search"></i></button>
+                            </div>
+                        </div>
+                    </form>                  
+                </div>
+                <div class="column right aligned">
+                                            <a href="?page=1" class="ui mini icon button">
+                            <i class="angle double left icon"></i>
+                        </a>                                
+                                                    <a href="?page=1" class="ui mini icon button red">
+                                &nbsp;1&nbsp;
+                            </a>
+                                                    <a href="?page=2" class="ui mini icon button ">
+                                &nbsp;2&nbsp;
+                            </a>
+                                                    <a href="?page=3" class="ui mini icon button ">
+                                &nbsp;3&nbsp;
+                            </a>
+                                                    <a href="?page=4" class="ui mini icon button ">
+                                &nbsp;4&nbsp;
+                            </a>
+                                                    <a href="?page=5" class="ui mini icon button ">
+                                &nbsp;5&nbsp;
+                            </a>
+                                                    
+                        <a href="?page=21" class="ui mini icon button page-button">
+                            <i class="angle double right icon"></i>
+                        </a>
+                                    </div>
+            </div>
+
+                        
+            <div class="ui divider"></div>
+
+                                                <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684852">
+                            <xmp>SENGKETA PERPAJAKAN DALAM PERSPEKTIF KEKUASAAN KEHAKIMAN </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/1496344"><xmp>Suyanto, Heru</xmp></a>; <a class="author-article" href="/author/view/232721"><xmp>Suherman, Suherman</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 2, No 1 (2015): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684852" onclick="show_abstract(1684852)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/163/135" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/163" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;SENGKETA+PERPAJAKAN+DALAM+PERSPEKTIF+KEKUASAAN+KEHAKIMAN&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684852&val=14393&title=SENGKETA PERPAJAKAN DALAM PERSPEKTIF KEKUASAAN KEHAKIMAN">
+                                    Full PDF (216.741 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v2i1.163">
+                                    DOI: 10.35586/.v2i1.163                                </a>
+                                                    </p>
+                        <div id="show_abstract1684852" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">The existence of the Tax Court has affirmed in UU No. 14 of 2002 on the Tax Court has the authority to examine and decide cases on tax disputes, but the presence of some of the characteristics of the Tax Court is not synergistic with the State Administrative Court still leaves will debate the status of the existence of the Court Tax system of judicial authority in Indonesia. Basically the Tax Court does have characteristics that almost resembles the State Administrative Court seen from the types of disputes that can be examined and decided upon. On the subject of dispute there is a slight difference due to the State Administrative Court only recognizes the people and civil legal entity that can take the case to be examined. While the Tax Court also acknowledged the permanent establishment as one of the subjects may submit the case to be examined in the Tax Court. It is not appropriate for some academics so as not fitting if the Tax Courtis under the State Administrative Court.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684853">
+                            <xmp>TELAAH TERHADAP PRESIDENTIAL THRESHOLD DALAM PEMILU SERENTAK 2019 </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/7181278"><xmp>Ansori, Lutfil</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 4, No 1 (2017): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684853" onclick="show_abstract(1684853)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/124/99" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/124" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;TELAAH+TERHADAP+PRESIDENTIAL+THRESHOLD+DALAM+PEMILU+SERENTAK+2019&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684853&val=14393&title=TELAAH TERHADAP PRESIDENTIAL THRESHOLD DALAM PEMILU SERENTAK 2019">
+                                    Full PDF (322.698 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v4i1.124">
+                                    DOI: 10.35586/.v4i1.124                                </a>
+                                                    </p>
+                        <div id="show_abstract1684853" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">This paper aims to examine the presidential threshold in relation to the simultaneous general elections 2019. After the decision of the Constitutional Court Number 14/PUU-XI/ 2013 which mandates the general election simultaneously raises the pros and cons of setting the presidential threshold. In the constitutional perspective, using or not using the presidential threshold is not contrary to the constitution, because the presidential threshold is an open legal policy of the legislator. The legislators need to rethink the provisions of the presidential threshold especially in relation to the simultaneous elections, taking into account the advantages and disadvantages of applying or abolishing the presidential threshold, in order for the purpose of strengthening the presidential system to be achieved. The existence of simultaneous general elections has substantially eliminated the provisions of the presidential threshold, so the threshold requirement to nominate the President and Vice President becomes irrelevant. However, if the legislators demand presidential threshold, the middle path that can be selected is to apply the presidential threshold by using the legislative election 2014 with a record of institutionalizing the coalition.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684854">
+                            <xmp>KUALIFIKASI POLITIK UANG DAN STRATEGI HUKUM DAN KULTURAL ATAS PENCEGAHAN POLITIK UANG DALAM PEMILIHAN UMUM </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/1601661"><xmp>Nail, Muhammad Hoiru</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 5, No 2 (2018): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684854" onclick="show_abstract(1684854)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/770/513" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/770" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;KUALIFIKASI+POLITIK+UANG+DAN+STRATEGI+HUKUM+DAN+KULTURAL+ATAS+PENCEGAHAN+POLITIK+UANG+DALAM+PEMILIHAN+UMUM&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684854&val=14393&title=KUALIFIKASI POLITIK UANG DAN STRATEGI HUKUM DAN KULTURAL ATAS PENCEGAHAN POLITIK UANG DALAM PEMILIHAN UMUM">
+                                    Full PDF (450.483 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v5i2.770">
+                                    DOI: 10.35586/.v5i2.770                                </a>
+                                                    </p>
+                        <div id="show_abstract1684854" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">Pemilihan umum secara garis besar ialah tindakan yang dilakukan oleh negara yang sah untuk mendapatkan pemimpin dalam sebuah negara (jabatan politik), ketentuan mengenai penyelenggaran pemilu sudah diatur melalui peraturan perundang-undangan, namun tidak sedikit dalam penyelenggaran pemilu, peserta pemilihan umum melakukan politik uang untuk memenangkan kompetisi tersebut. Tindakan politik uang harus diformulasikan dengan baik agar tindakan politik uang dapat benar-benar sesuai dengan hakikat politik uang. Tindakan penggantian uang transportasi, uang lelah dan uang makan dalam mobilisasi pemilih dalam kampanye terbuka perlu penegasan dari kajian ilmu hukum. Instumen hukum terhadap pencegahan politik uang harus dikaji secara mendalam, penerapan hukum pidana sebagai ultimum remidium harus dikaji secara mendalam, beberapa cara lainnya dapat digunakan sebagai metode pencegahan politik uang selain mekanisme hukum yang ada.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684855">
+                            <xmp>PERAN INDONESIA DALAM PENANGGULANGAN NARKOTIKA </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/568846"><xmp>Zaidan, M Ali</xmp></a>; <a class="author-article" href="/author/view/1229446"><xmp>Wahyuningsih, Yuliana Yuli</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 2, No 2 (2015): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684855" onclick="show_abstract(1684855)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/200/170" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/200" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;PERAN+INDONESIA+DALAM+PENANGGULANGAN+NARKOTIKA&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684855&val=14393&title=PERAN INDONESIA DALAM PENANGGULANGAN NARKOTIKA">
+                                    Full PDF (103.841 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v2i2.200">
+                                    DOI: 10.35586/.v2i2.200                                </a>
+                                                    </p>
+                        <div id="show_abstract1684855" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">Narcotics is an international problem faced  by the nations of the world.  Narcotic crime is a crime that is extra ordinary crime and has become transnational organized crime. Therefore its eradication must be carried out with  the  cooperation  of  each  country while effecting the respective national laws in addition  adopt  a  international conventions relating to counter-narcotics. Indonesia's role occupied a strategic place, especially in Southeast Asia and the world at large. Indonesia has shown firmness in the form of legislation that threatens the maximum punishment and they are proven to distribute narcotics have been partially executed. Indonesia is responsible at least in the region makes the drug as a common enemy . </xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684856">
+                            <xmp>GAGASAN PENGATURAN PENJATUHAN SANKSI PIDANA DENGAN BERORIENTASI PADA KORBAN </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/254772"><xmp>Harahap, Diah Ratu Sari</xmp></a>; <a class="author-article" href="/author/view/232721"><xmp>Suherman, Suherman</xmp></a>; <a class="author-article" href="/author/view/1496335"><xmp>Aryanti R, Dwi</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 1, No 2 (2014): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684856" onclick="show_abstract(1684856)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/153/125" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/153" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;GAGASAN+PENGATURAN+PENJATUHAN+SANKSI+PIDANA+DENGAN+BERORIENTASI+PADA+KORBAN&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684856&val=14393&title=GAGASAN PENGATURAN PENJATUHAN SANKSI PIDANA DENGAN BERORIENTASI PADA KORBAN">
+                                    Full PDF (338.319 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v1i2.153">
+                                    DOI: 10.35586/.v1i2.153                                </a>
+                                                    </p>
+                        <div id="show_abstract1684856" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">Human is social creature. Human always needs others in getting their needs. Human sometimes breaks the law. Indonesian positive law has regulated material law as well as formal law. Formal law in criminal that is called crimin al procedural law in Indonesia is Kitab Undang-Undang Hukum Acara Pidana. Beside that, criminal procedural rule is regulated in several special criminal material rule. Criminal procedural law now focuses to suspects. Victims are not too concerned. Police only need their report. Further, the interest of victims is not important anymore. In the end, the decision of the judge is not accommodate the victim?s suffering.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684857">
+                            <xmp>PILIHAN KEBIJAKAN HUKUM PERSAINGAN USAHA DI PELABUHAN INDONESIA DALAM PEMBERLAKUAN MASYARAKAT EKONOMI ASEAN (MEA) </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/3236321"><xmp>Lutfi, Khoirur Rizal</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 3, No 2 (2016): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684857" onclick="show_abstract(1684857)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/207/177" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/207" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;PILIHAN+KEBIJAKAN+HUKUM+PERSAINGAN+USAHA+DI+PELABUHAN+INDONESIA+DALAM+PEMBERLAKUAN+MASYARAKAT+EKONOMI+ASEAN+MEA&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684857&val=14393&title=PILIHAN KEBIJAKAN HUKUM PERSAINGAN USAHA DI PELABUHAN INDONESIA DALAM PEMBERLAKUAN MASYARAKAT EKONOMI ASEAN MEA">
+                                    Full PDF (209.871 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v3i2.207">
+                                    DOI: 10.35586/.v3i2.207                                </a>
+                                                    </p>
+                        <div id="show_abstract1684857" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">This paper is intended to discuss optional policy in the Indonesian port competition law within the framework of implementation of the ASEAN Economic Community (AEC) as  a new step in determining competition policy in Indonesian ports. Basically, competition law optional policy in the port can be done through several schemes. Starting from enforcing the law that was good but not implemented yet (law enforcement), shaping  new policies or revise some provisions are considered to inhibit the implementation of the agenda of creating a climate of healthy competition, or both simultaneously. Besides the option of specifying a system and harbor good governance should also remain a priority. Good governance can be done through the benchmark system established and applied by other countries.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684858">
+                            <xmp>NORMA SANKSI DAN TEORI PIDANA INDONESIA </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/568846"><xmp>Zaidan, M Ali</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 1, No 1 (2014): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684858" onclick="show_abstract(1684858)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/144/117" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/144" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;NORMA+SANKSI+DAN+TEORI+PIDANA+INDONESIA&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684858&val=14393&title=NORMA SANKSI DAN TEORI PIDANA INDONESIA">
+                                    Full PDF (773.214 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v1i1.144">
+                                    DOI: 10.35586/.v1i1.144                                </a>
+                                                    </p>
+                        <div id="show_abstract1684858" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">Norms and sanctions in the criminal law are duumvirates nature. Interplay between the two. Norm without sanctions would lead to paralysis; sanctions that are not otherwise supported by the norms that will either lead to arbitrariness. Indonesian Penal Theory needs to build and developed with reference to the development of leading edge science and doctrine developed by the developed contries. Without losing the distinctive characteristics of the Indonesian Penal Theory. Guardiantship of a criminal theory that should be developed models in order to guide the prevention of crime and treatment of offenders.</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684859">
+                            <xmp>Kompetensi DPD RI Dalam Mengemban Amanah Undang – Undang Nomor 2 Tahun 2018 Tentang MPR, DPR, DPD dan DPRD Sebagai Lembaga Tinggi Negara </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/1997754"><xmp>Rianda Dirkareshza</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 6, No 2 (2019): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684859" onclick="show_abstract(1684859)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/1106/757" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/1106/757" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Kompetensi+DPD+RI+Dalam+Mengemban+Amanah+Undang++Undang+Nomor+2+Tahun+2018+Tentang+MPR+DPR+DPD+dan+DPRD+Sebagai+Lembaga+Tinggi+Negara&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684859&val=14393&title=Kompetensi DPD RI Dalam Mengemban Amanah Undang  Undang Nomor 2 Tahun 2018 Tentang MPR DPR DPD dan DPRD Sebagai Lembaga Tinggi Negara">
+                                    Full PDF (309.492 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/jyur.v6i2.1106">
+                                    DOI: 10.35586/jyur.v6i2.1106                                </a>
+                                                    </p>
+                        <div id="show_abstract1684859" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">Salah satu poin penting dalam revisi UU No. 2 Tahun 2018 tentang MPR, DPR, DPD dan DPRD adalah penambahan kewenangan Dewan Perwakilam Daerah Republik Indonesia dalam mengawasi dan mengevaluasi peraturan daerah (perda) dan rancangan peraturan daerah (raperda). Dalam UU MD3 pasal 249 ayat 1 huruf J itu, disebutkan bahwa DPD mempunyai wewenang dan tugas: “melakukan pemantauan dan evaluasi atas rancangan peraturan daerah dan peraturan daerah”. Pembentukan DPD sendiri adalah upaya konstitusional untuk mengakomodasi suara daerah dengan memberi saluran, sekaligus peran kepada daerah-daerah. Saluran dan peran tersebut dilakukan dengan memberikan tempat bagi daerah-daerah untuk menempatkan wakilnya dalam badan perwakilan tingkat nasional untuk memperjuangkan dan menyuarakan kepentingan-kepentingan daerahnya, terutama dalam bidang legislasi, anggaran, dan pengawasan. Sehingga akan memperkuat ikatan dalam kesatuan Negara Republik Indonesia. DPD mencerminkan prinsip representasi teritorial atau regional (regional representation) dari daerah, dalam hal ini provinsi. Sama dengan DPD, Keberadaan peraturan perundang-undangan tingkat daerah pada hakikatnya merupakan akibat diterapkannya prinsip desentralisasi dalam penyelenggaraan pemerintahan di daerah. Karena itu memberikan relasi yang cukup terhadap DPD sebagai territorial representative dan perda sebagai regulasi daerah, menjadi syarat bagi jalannya desentralisasi dan pembangunan daerah yang baik. </xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684860">
+                            <xmp>PERTANGGUNGJAWABAN WAKIL PRESIDEN MENURUT SISTEM PEMERINTAHAN INDONESIA (STUDI PERTANGGUNGJAWABAN WAKIL PRESIDEN PASCA PERUBAHAN UUD 1945) </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/7181278"><xmp>Ansori, Lutfil</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 1, No 1 (2014): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684860" onclick="show_abstract(1684860)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/139/112" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/139" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;PERTANGGUNGJAWABAN+WAKIL+PRESIDEN+MENURUT+SISTEM+PEMERINTAHAN+INDONESIA+STUDI+PERTANGGUNGJAWABAN+WAKIL+PRESIDEN+PASCA+PERUBAHAN+UUD+1945&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684860&val=14393&title=PERTANGGUNGJAWABAN WAKIL PRESIDEN MENURUT SISTEM PEMERINTAHAN INDONESIA STUDI PERTANGGUNGJAWABAN WAKIL PRESIDEN PASCA PERUBAHAN UUD 1945">
+                                    Full PDF (1171.39 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v1i1.139">
+                                    DOI: 10.35586/.v1i1.139                                </a>
+                                                    </p>
+                        <div id="show_abstract1684860" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">In the system of government of the Republic of Indonesia, the President holds the highest governmental authority in carrying out its obligations assisted by a Vice President. The 1945 Constitution of the Republic of Indonesia, article 4 is said "In performing duties, the President is assisted by a Vice President". Constitutionally this article shows the position and duties of the Vice President as assistant to the President. Presenting the system of government by the constitution is intended to determine a position of the Vice President in related with the President in terms of responsibility. Based on normative juridical approach in this research, it is concluded that the presence of 1945 Constitution Amendment increasingly clarifies that the Vice President responsibility is to the President. It is based on the position of the Vice President interpretation in the Indonesian system that is not equal. This unequal position shows that the presidency as an organizer of the government administration is singular (single executive). However, to avoid the impression of the Vice President as a "spare tire", the Vice President should be given a clear constitutionally duties by delegating or sharing ofduties and not through delegating or sharing of the power</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                                    <div class="article-item">        
+                        <a class="title-article" href="/documents/detail/1684861">
+                            <xmp>KEDUDUKAN AHLI WARIS YANG PENERIMA HIBAH DARI ORANG TUA TERHADAP AHLI WARIS LAINNYA PADA PROSES PEMBAGIAN WARIS </xmp>
+                        </a>
+                        <a class="author-article" href="/author/view/523066"><xmp>Sanjaya, Umar Haris</xmp></a>; <a class="author-article" href="/author/view/1496366"><xmp>Suprapton, Muhammad Yusuf</xmp></a>                        <br>
+                        <xmp class="subtitle-article"> Jurnal Yuridis Vol 4, No 2 (2017): Jurnal Yuridis </xmp>
+                        <br>
+                        <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                        <p class="action-article">
+                            <a class="btn_show_abstract title-citation" target="1684861" onclick="show_abstract(1684861)"> Show Abstract</a>
+                            | <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/download/253/218" target="_blank">
+                                <i class="download icon"></i> Download Original
+                            </a>
+                            | <i>
+                                <a class="title-citation" href="https://ejournal.upnvj.ac.id/index.php/Yuridis/article/view/253" target="_blank">
+                                    Original Source
+                                </a>
+                            </i>
+                            | <i>
+                                <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;KEDUDUKAN+AHLI+WARIS+YANG+PENERIMA+HIBAH+DARI+ORANG+TUA+TERHADAP+AHLI+WARIS+LAINNYA+PADA+PROSES+PEMBAGIAN+WARIS&quot;" target="_blank">
+                                    Check in Google Scholar
+                                </a>
+                            </i>
+                                                            |
+                                <i class="file pdf outline icon"></i>
+                                <a class="title-citation" target="_blank" href="http://download.garuda.kemdiktisaintek.go.id/article.php?article=1684861&val=14393&title=KEDUDUKAN AHLI WARIS YANG PENERIMA HIBAH DARI ORANG TUA TERHADAP AHLI WARIS LAINNYA PADA PROSES PEMBAGIAN WARIS">
+                                    Full PDF (297.72 KB)
+                                </a>
+                                                                                            
+                                | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/.v4i2.253">
+                                    DOI: 10.35586/.v4i2.253                                </a>
+                                                    </p>
+                        <div id="show_abstract1684861" class="article-abstract">
+                            <div class="ui message tiny basic">
+                                <h4 class="ui header">
+                                    <b>Abstract</b>
+                                </h4>
+                                <div class="abstract-article">
+                                    <xmp class="abstract-article">This research focused on the clarification in the meaning of legal status of the heir which is the heir received the donation (grant) from the parents before. In fact, the other heirs does not recognize the position of donation receiver to gets inheritance rights belong to parents. This research using context of probles as how the legal status of the heir (donation receiver) belong to the other heirs in receiving inheritance, is the donation receiver does not has rights in inheritance. Research result found that meaning of donation in the 3 perspective of private law giving the  similar consequences, thus are based on private law (civil code), adat law, and islamic fiqih law (KHI). Those are giving perspective that donation is recognized as the inhertance. And the legal status of receiver donation is available to receive inheritance. </xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                            
+                            <div class="ui two column stackable grid">
+                    <div class="column">
+                        <p class="pagination-info">
+                            Page 1 of 21                            | Total Record : 210 
+                        </p>
+                    </div>
+                    <div class="column">
+                                                    <div class="page-column"  style="float: right !important;">
+                                <a href="?page=1" class="ui mini icon button">
+                                    <i class="angle double left icon"></i>
+                                </a>                                
+                                                                    <a href="?page=1" class="ui mini icon button red">
+                                        &nbsp;1&nbsp;
+                                    </a>
+                                                                    <a href="?page=2" class="ui mini icon button ">
+                                        &nbsp;2&nbsp;
+                                    </a>
+                                                                    <a href="?page=3" class="ui mini icon button ">
+                                        &nbsp;3&nbsp;
+                                    </a>
+                                                                    <a href="?page=4" class="ui mini icon button ">
+                                        &nbsp;4&nbsp;
+                                    </a>
+                                                                    <a href="?page=5" class="ui mini icon button ">
+                                        &nbsp;5&nbsp;
+                                    </a>
+                                                            
+                                <a href="?page=21" class="ui mini icon button">
+                                    <i class="angle double right icon"></i>
+                                </a>
+
+                                <a class="circular mini ui icon button right floated scroll-top">
+                                    <i class="icon arrow circle up"></i>
+                                </a>
+                            </div>                        
+                                            </div>
+                </div>
+                <br>
+            
+        </div>
+    </div>
+    <div class="four wide column">
+                    <div class="ui segment">
+                <div class="j-meta-img">
+                    <a href="https://sinta.kemdiktisaintek.go.id/journals/detail?id=5158" target="_blank">
+                        <img src="https://sinta.kemdiktisaintek.go.id/badge/journal?id=5158" alt="" width="100%">
+                    </a>
+                </div>
+            </div>
+        
+        <div class="ui segment padded">
+            <a class="ui top attached label">Filter by Year</a>
+            <p>
+                2014                <span style="float: right"> 2026</span>
+            </p> 
+            <div id="slider-range"></div>
+            <br>
+
+            <form id="filter_year" class="ui mini form" action="" method="get">
+                                <div class="equal width fields">
+                    <div class="field">
+                        <label>From</label>
+                        <input type="text" id="from" name="from">
+                    </div>
+                    <div class="field">
+                        <label>To</label>
+                        <input type="text" id="to" name="to">
+                    </div>
+                </div>
+                <div class="equal width fields">
+                    <div class="field">
+                        <button class="ui mini fluid button" type="submit">Filter</button>
+                    </div>
+                    <div class="field">
+                        <a class="ui mini fluid button basic red" href="/journal/view/14393">Reset</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        
+                    <div class="ui segment padded issue-box">
+                <div class="ui top attached label">Filter By Issues</div>
+                                <a class="title-issue title-issue-active" href="/journal/view/14393"> All Issue</a>
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 13 No 1 (2026): Jurnal Yuridis"> Vol 13 No 1 (2026): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 12 No 2 (2025): Jurnal Yuridis"> Vol 12 No 2 (2025): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 12 No 1 (2025): Jurnal Yuridis"> Vol 12 No 1 (2025): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 11 No 2 (2024): Jurnal Yuridis"> Vol 11 No 2 (2024): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 11 No 1 (2024): Jurnal Yuridis"> Vol 11 No 1 (2024): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 10 No 2 (2023): Jurnal Yuridis"> Vol 10 No 2 (2023): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 10 No 1 (2023): Jurnal Yuridis"> Vol 10 No 1 (2023): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 9 No 2 (2022): Jurnal Yuridis"> Vol 9 No 2 (2022): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 9, No 1 (2022): Jurnal Yuridis"> Vol 9, No 1 (2022): Jurnal Yuridis</a>
+                     
+                                                            <span id="dots-issue"></span>
+                        <span id="more-issue">
+                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 8, No 2 (2021): Jurnal Yuridis"> Vol 8, No 2 (2021): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 8, No 1 (2021): Jurnal Yuridis"> Vol 8, No 1 (2021): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 7 No 2 (2020): Jurnal Yuridis"> Vol 7 No 2 (2020): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 7, No 1 (2020): Jurnal Yuridis"> Vol 7, No 1 (2020): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 6, No 2 (2019): Jurnal Yuridis"> Vol 6, No 2 (2019): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 6, No 1 (2019): Jurnal Yuridis"> Vol 6, No 1 (2019): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 5, No 2 (2018): Jurnal Yuridis"> Vol 5, No 2 (2018): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 5, No 1 (2018): Jurnal Yuridis"> Vol 5, No 1 (2018): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 4, No 2 (2017): Jurnal Yuridis"> Vol 4, No 2 (2017): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 4, No 1 (2017): Jurnal Yuridis"> Vol 4, No 1 (2017): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 3, No 2 (2016): Jurnal Yuridis"> Vol 3, No 2 (2016): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 3, No 1 (2016): Jurnal Yuridis"> Vol 3, No 1 (2016): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 2, No 2 (2015): Jurnal Yuridis"> Vol 2, No 2 (2015): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 2, No 1 (2015): Jurnal Yuridis"> Vol 2, No 1 (2015): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 1, No 2 (2014): Jurnal Yuridis"> Vol 1, No 2 (2014): Jurnal Yuridis</a>
+                     
+                                                        <a class="title-issue " href="/journal/view/14393?issue=Vol 1, No 1 (2014): Jurnal Yuridis"> Vol 1, No 1 (2014): Jurnal Yuridis</a>
+                     
+                                </span>
+                                    <a onclick="readMore()" id="btn-issue">More Issue</a>
+                            </div>
+            </div>
+</div>
+
+<script>
+	var ctx = document.getElementById("myChart").getContext('2d');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: [
+                                   2026,                                   2025,                                   2024,                                   2023,                                   2022,                			],
+			datasets: [{
+				label: 'Articles',
+				data: [
+                                            10,                                            20,                                            20,                                            13,                                            19,                    				],
+				backgroundColor: [
+                                            'rgba(56, 188, 0, 0.2)',
+                                            'rgba(56, 188, 0, 0.2)',
+                                            'rgba(56, 188, 0, 0.2)',
+                                            'rgba(56, 188, 0, 0.2)',
+                                            'rgba(56, 188, 0, 0.2)',
+                    				],
+				borderColor: [
+                                            'rgba(56, 188, 0, 1)',
+                                            'rgba(56, 188, 0, 1)',
+                                            'rgba(56, 188, 0, 1)',
+                                            'rgba(56, 188, 0, 1)',
+                                            'rgba(56, 188, 0, 1)',
+                    				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			responsive: true,
+    		maintainAspectRatio: false,
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+    $( function() {
+        $("#slider-range" ).slider({
+            range: true,
+            min: 2014,
+            max: 2026,
+            values: [ 2014, 2026 ],
+            slide: function( event, ui ) {
+                $("#from").val(ui.values[ 0 ]);
+                $("#to").val(ui.values[ 1 ]);
+            }
+        });
+        $("#from").val( $( "#slider-range" ).slider( "values", 0 ));
+        $("#to").val($( "#slider-range" ).slider( "values", 1 ));
+    });
+
+    function readMore() {
+        var dots = document.getElementById("dots-issue");
+        var moreText = document.getElementById("more-issue");
+        var btnText = document.getElementById("btn-issue");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "More Issue"; 
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Less Issue"; 
+            moreText.style.display = "inline";
+        }
+    }
+</script><!-- </div> -->
+</main>
+
+<div class="links-box">
+    <ul>
+        <li><a href="https://sinta.kemdiktisaintek.go.id" target="_blank">Sinta</a></li>
+        <li><a title="Basis Informasi Penelitian dan Pengabdian kepada Masyarakat" href="https://bima.kemdiktisaintek.go.id" target="_blank">Bima</a></li>
+        <li><a title="Akreditasi Jurnal Nasional" href="https://arjuna.kemdiktisaintek.go.id" target="_blank">Arjuna</a></li>
+        <li><a title="Pangkalan Data Pendidikan Tinggi Ristekdikti" href="https://pddikti.kemdiktisaintek.go.id" target="_blank">PDDIKTI</a></li>
+        <li><a title="Data Riset dan Pengembangan Ristekdikti" href="https://dikti.kemdiktisaintek.go.id/" target="_blank">Risbang</a></li>
+        <li><a title="The Largest Abstract and Citation Database of Peer-Reviewed Literature" href="https://www.scopus.com" target="_blank">Scopus</a></li>
+        <li><a title="Repositori Tugas Akhir Mahasiswa" href="https://rama.kemdiktisaintek.go.id/" target="_blank">Rama</a></li>
+    </ul>
+</div>
+<footer class="ui grid equal width footer">
+    <div class="clearfix"></div>
+    <div class="column">
+        <img src="/assets/img/logo_dikbud.png" />
+        <div class="footer-company">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi </div>
+        <div class="footer-subcompany">(The Ministry of Education, Culture, Research, and Technology)</div>
+        <div class="footer-copyright">&copy; 2018</div>
+    </div>
+    <div class="column"></div>
+</footer>
+<!-- UI KIT -->
+
+
+
+
+<script>
+    setTimeout(function() {
+        // $('#flash_message').slideUp( 300, "linear" );
+        $('#flash_message').fadeOut( "slow");
+    }, 2000);
+</script>
+<!-- AUTOSEARCH BUKU-->
+<script>
+    $(function() {
+        $("#suggest_pub").autocomplete({
+            source: "/suggest/findPublisher",
+            select: function( event, ui ) {
+                event.preventDefault();
+                $("#suggest_pub").val(ui.item.value);
+            }
+        });
+    });
+</script>
+<!-- END AUTOSEARCH BUKU-->
+
+
+<script type="text/javascript">
+    $('.ui.checkbox').checkbox();
+    $('select.dropdown').dropdown();
+    $('.ui.dropdown').dropdown();
+    $('.top.menu .item').tab();
+
+    $(document).ready(function () {
+
+        $("#sort").change(function () {
+            var page = 1;
+            // $("#sort").val(page);
+            $("#form_sort").submit();
+        });
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_journal").submit();
+        });        
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_alphabeth").submit();
+        });
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_search").submit();
+        });
+
+        $('#page').keydown(function () {
+            var key = e.which;
+            if (key == 13) {
+                $('#form_journal').submit();
+            }
+        });
+
+        $('#form_journal').keydown(function () {
+            var key = e.which;
+            if (key == 13) {
+                // As ASCII code for ENTER key is "13"
+                $('#form_journal').submit(); // Submit form code
+            }
+        });
+
+        $('.demo.menu .item').tab({history: false});
+
+        $('.area-cloud a').tagcloud();
+
+    });
+
+    $('.ui.top.attached.tabular.menu .item').tab({history: false});
+
+    $.fn.tagcloud.defaults = {
+        size: {start: 9, end: 30, unit: 'pt'},
+        color: {start: '#444', end: '#ed462f'}
+    };
+
+    function show_abstract(id){
+        $('#show_abstract'+id).slideToggle();
+    }
+
+    $(document).ready(function () {
+        $('#adv-btn').on('click', function () {
+            $('#adv-box').slideToggle('slow');
+            $('#form-journal').slideToggle('slow');
+        });
+
+        $('#adv-less').on('click', function () {
+            $('#adv-box').slideToggle('slow');
+            $('#form-journal').slideToggle('slow');
+        });
+    });
+
+
+
+</script>
+
+</body>
+</html>

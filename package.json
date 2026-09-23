@@ -1,0 +1,20 @@
+{
+  "name": "open-knowledge-mapping",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Open Knowledge Mapping — antarmuka visual untuk menjelajahi pengetahuan ilmiah (Garuda, SINTA/ARJUNA, OpenAlex). Real-time crawling, tanpa database.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "start": "npm run start -w server",
+    "build": "npm run build -w client",
+    "test": "npm test -w server",
+    "screenshots": "node scripts/take-screenshots.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

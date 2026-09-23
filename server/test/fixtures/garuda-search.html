@@ -1,0 +1,742 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="garuda garba rujukan digital">
+        <meta name="author" content="kementrian riset, teknologi dan pendidikan tinggi">
+        <link rel="icon" href="/assets/img/garuda-icon.png">
+
+        <title>Garuda - Garba Rujukan Digital</title>
+
+        <!-- SEMANTIC UI -->
+        <link href="/assets/semantic/semantic.min.css" rel="stylesheet">
+        <link href="/assets/semantic/components/reset.css" rel="stylesheet"> 
+
+        <link href="/assets/css/main.css" rel="stylesheet">
+        <link href="/assets/css/app.css" rel="stylesheet">
+        <link href="/assets/css/flash-message.css" rel="stylesheet">
+        
+        <!-- JQUERY UI - AUTOCOMPLETE -->
+        <link href="/assets/css/jquery-ui/jquery-ui.css" rel="stylesheet" />
+
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/semantic/semantic.min.js"></script>
+        <script src="/assets/js/jquery.tagcloud.js" type="text/javascript"></script>
+        <script src="/assets/js/Chart.js"></script>
+        <script src="/assets/custom/main.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <!-- JQUERY UI - AUTOCOMPLETE -->
+        <script src="/assets/js/jquery-ui/jquery-ui.min.js"></script>
+    </head>
+
+
+
+    <body>
+                <div class="ui stackable menu top-menu">
+            <a class="header item brand" href="/">
+                 <img src="/assets/img/garuda1.png" alt=""> 
+            </a>
+            <div class="right menu">
+                <a class="nav item " href="/">Home</a>
+                <a class="nav item " href="/publisher">Publisher</a>
+                <a class="nav item " href="/journal">Journal / Conference</a>
+                <a class="nav item " href="/area">Subject</a>
+                <a class="nav item " href="/suggest">Suggest</a>
+                <a class="nav item" target="_blank" href="https://drive.google.com/drive/folders/19TuyOLkABcMgh99AgLweV-B8BE1wcUl8?usp=sharing">Guidebook</a>
+                <a class="nav item disabled">&nbsp;</a>
+            </div>
+        </div>
+
+        <main role="main" class="container">
+
+<div class="row" style="margin: 0 15px;">
+    <form class="ui form" action="" method="GET">
+        <div class="ui stackable padded grid">
+            <div class="three wide field column">
+                <label>Search By</label>
+                <select class="ui selection dropdown" name="select">
+                    <option value="title" >Title</option>
+                    <option value="abstract" >Abstract</option>
+                    <option value="author" >Author</option>
+                    <option value="doi" >DOI</option>
+                </select>
+                <div class="ui checkbox" style="margin-top: 10px;">
+                    <input type="checkbox" tabindex="0" name="pdf" value="1" >
+                    <label>Downloadable PDF Only</label>
+                </div>
+            </div>
+            <div class="seven wide field column">
+                <label>Keywords</label>
+                <input type="text" name="q" placeholder="Source Title" value="artificial intelligence" minlength="3" required> 
+            </div>
+            <div class="four wide field column">
+                <label>Publisher</label>
+                <input type="text" name="pub" placeholder="Publisher Name" value="" minlength="3">
+            </div>
+            <div class="two wide field column">
+                <label>&nbsp;</label>
+                <button class="ui fluid button" type="submit"><i class="search icon"></i> Search</button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="ui stackable grid">
+        <div class="four wide column">
+            <div class="ui basic segment">
+                <h4 class="ui header">Filter By Year</h4>
+                <p>
+                    1945                    <span style="float: right"> 2024</span>
+                </p> 
+                <div id="slider-range"></div>
+                <br>
+
+                <form id="filter_year" class="ui mini form" action="" method="get">
+                                            <input type="hidden" name="q" value="artificial intelligence">
+                                                        
+                                        
+                    <div class="equal width fields">
+                        <div class="field">
+                            <label>From</label>
+                            <input type="text" id="from" name="from">
+                        </div>
+                        <div class="field">
+                            <label>To</label>
+                            <input type="text" id="to" name="to">
+                        </div>
+                    </div>
+                    <div class="equal width fields">
+                        <div class="field">
+                            <button class="ui mini fluid button" type="submit">Filter</button>
+                        </div>
+                        <div class="field">
+                            <a class="ui mini fluid button basic red" href="/documents/?q=artificial intelligence&select=&pub=&pdf=">Reset</a>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="twelve wide column">
+            <div class="ui equal width grid">
+                <div class="column">
+                    <h2 class="ui header">
+                        <i class="search icon"></i>
+                        <div class="content">
+                            Found 12,148 documents
+                            <div class="sub header">Search  
+                                <i><xmp>artificial intelligence</xmp></i> 
+                                <i><xmp></xmp></i> 
+                                <i><xmp></xmp></i>  
+                                <i><xmp></xmp></i>
+                                <i><xmp></xmp></i>
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+                <div class="column right aligned">
+                                            <div class="page-column" style="float: right !important;">
+                            <a href="?page=1&q=artificial intelligence" class="ui mini icon button">
+                                <i class="angle double left icon"></i>
+                            </a>                                
+                                                            <a href="?page=1&q=artificial intelligence" class="ui mini icon button orange">
+                                    &nbsp;1&nbsp;
+                                </a>
+                                                            <a href="?page=2&q=artificial intelligence" class="ui mini icon button ">
+                                    &nbsp;2&nbsp;
+                                </a>
+                                                            <a href="?page=3&q=artificial intelligence" class="ui mini icon button ">
+                                    &nbsp;3&nbsp;
+                                </a>
+                                                            <a href="?page=4&q=artificial intelligence" class="ui mini icon button ">
+                                    &nbsp;4&nbsp;
+                                </a>
+                                                            <a href="?page=5&q=artificial intelligence" class="ui mini icon button ">
+                                    &nbsp;5&nbsp;
+                                </a>
+                                                        
+                            <a href="?page=1215&q=artificial intelligence" class="ui mini icon button page-button">
+                                <i class="angle double right icon"></i>
+                            </a>
+                        </div>
+					                </div>
+            </div>
+
+            <div class="ui">
+                <div class="ui divider"></div>
+                                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/5765183">
+                                <xmp>INTELLECTUAL PROPERTY RIGHTS AND ARTIFICIAL INTELLIGENCE: MENYOAL KOMPARASI PERLINDUNGAN HAK ATAS KEKAYAAN INTELEKTUAL ANTARA EUROPEAN UNION ARTIFICIAL INTELLIGENCE ACT DAN HUKUM POSITIF INDONESIA: Problems of Artificial Intelligence Development on the Legal Regime of Intellectual Property Rights and Comparative Legal Regimes for Artificial Intelligence between Indonesia and the European Union </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/11087510"><xmp>Wahid Inayah Tullah</xmp></a>; <a class="author-article" href="/author/view/11087511"><xmp>Chandra Airlangga Ar Fakhsal</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> Jurnal Yuridis Vol 11 No 2 (2024): Jurnal Yuridis </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Fakultas Hukum Universitas Pembangunan Nasional "Veteran" Jakarta </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="5765183" onclick="show_abstract(5765183)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://ejournal.upnvj.ac.id/Yuridis/article/download/9649/3914" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://ejournal.upnvj.ac.id/Yuridis/article/view/9649/3914" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;INTELLECTUAL+PROPERTY+RIGHTS+AND+ARTIFICIAL+INTELLIGENCE+MENYOAL+KOMPARASI+PERLINDUNGAN+HAK+ATAS+KEKAYAAN+INTELEKTUAL+ANTARA+EUROPEAN+UNION+ARTIFICIAL+INTELLIGENCE+ACT+DAN+HUKUM+POSITIF+INDONESIA+Problems+of+Artificial+Intelligence+Development+on+the+Legal+Regime+of+Intellectual+Property+Rights+and+Comparative+Legal+Regimes+for+Artificial+Intelligence+between+Indonesia+and+the+European+Union&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.35586/jyur.v11i2.9649">
+                                        DOI: 10.35586/jyur.v11i2.9649                                    </a>
+                                                            </p>
+                            <div id="show_abstract5765183" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Penelitian ini didasari atas dinamika perkembangan teknologi Artificial Intelligence diIndonesia yang tidak diikuti dengan perkembangan regulasi yang mumpuni yang pada akhirnyamelahirkan problematika multidimensional khususnya dalam kaitannya dengan KekayaanIntelektual. Berbanding terbalik dengan Uni Eropa yang telah diklaim mampu memberikanperlindungan terhadap permasalahan tersebut melalui pengaturan komprehensifnya terkaitdengan Artificial Intelligence, European Union Artificial Intelligence Act. Melalui penelitianini, peneliti berhasil untuk mengumpulkan, menganalisis, dan menjelaskan problematika dalamperkembangan Artificial Intelligence yang terjadi dalam dimensi Kekayaan Intelektual, sepertipenggunaan tanpa hak suatu kekayaan intelektual dalam proses pembelajaran ArtificialIntelligence, kaitannya dengan Kekayaan Intelektual sebagai data pribadi, dan kurangnyaperlindungan dalam regulasi yang ada. Disimpulkan juga bahwa perlindungan hukum yangdiberikan oleh European Union Artificial Intelligence Act terhadap Kekayaan Intelektualsemestinya dapat dijadikan acuan dalam penyusunan peraturan komprehensif sebagai solusipenyelesaian problematika yang muncul di Indonesia.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/2513451">
+                                <xmp>Quo Vadis Undang-Undang Hak Cipta Indonesia: Perbandingan Konsep Ciptaan Artificial Intelligence di Beberapa Negara (Quo Vadis Indonesian Copyright Law: Comparison of Artificial Intelligence Creation Concepts in Several Countries) </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/402509"><xmp>Rahmadi Indra Tektona</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> Jurnal Negara Hukum: Membangun Hukum Untuk Keadilan Vol 12, No 2 (2021): JNH VOL 12 NO 2 November 2021 </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Pusat Penelitian Badan Keahlian Setjen DPR RI </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="2513451" onclick="show_abstract(2513451)"> Show Abstract</a>
+                                | <a class="title-citation" href="http://jurnal.dpr.go.id/index.php/hukum/article/download/2144/pdf" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="http://jurnal.dpr.go.id/index.php/hukum/article/view/2144/pdf" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Quo+Vadis+Undang-Undang+Hak+Cipta+Indonesia+Perbandingan+Konsep+Ciptaan+Artificial+Intelligence+di+Beberapa+Negara+Quo+Vadis+Indonesian+Copyright+Law+Comparison+of+Artificial+Intelligence+Creation+Concepts+in+Several+Countries&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.22212/jnh.v12i2.2144">
+                                        DOI: 10.22212/jnh.v12i2.2144                                    </a>
+                                                            </p>
+                            <div id="show_abstract2513451" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">The use of artificial intelligence (AI) systems in production are expected in this era of sophisticated technology. However, there are deep concerns that AI technology will run out of control. With advanced technology, it was only a matter of time these systems began to produce amazing inventions without human intervention. This raises questions regarding intellectual property rights because it is not only disrupting the concept of copyright but also leads to questions related to the relevance of the Copyright Law, which, however, is considered lagging in responding to this development of AI. Through a conceptual approach and using normative, doctrinal legal research methods, and comparative studies, as well as using qualitative analysis techniques, this article argues that a conceptualization and redefinition of the regulation and legal framework related to copyright is needed as well as presenting social and legal tools to control the functions and outcomes of AI system. The recommendation in this article, the Government, should be aware of the great urgency of providing incentives needed by programmers and AI owners to stimulate future development and investment in AI. To accommodate AI-generated works, the Government needs to redesign the Indonesian Copyright Law to accommodate copyright issues, moral and economic rights, and the protection period for AI-created works; and consider adopting the use of the work made for hire concept. AbstrakPenggunaan sistem artificial intelligence (AI) dalam produksi merupakan hal biasa di era teknologi yang serba canggih. Namun, ada keprihatinan yang mendalam bahwa teknologi AI akan menjadi tidak terkendali. Dengan teknologi canggih, hanya masalah waktu sistem ini mulai menghasilkan penemuan yang luar biasa tanpa campur tangan manusia. Hal ini menimbulkan pertanyaan terkait hak kekayaan intelektual karena tidak hanya mendisrupsi konsep hak cipta, tetapi juga mengarah pada munculnya pertanyaan terkait relevansi UU Hak Cipta yang bagaimanapun dinilai tertinggal dalam merespon perkembangan AI ini. Melalui pendekatan konseptual dan menggunakan metode penelitian hukum normatif, doktrinal, dan studi perbandingan, serta menggunakan teknik analisis kualitatif, artikel ini berpendapat bahwa dibutuhkan sebuah konseptualisasi dan redefinisi terhadap regulasi dan kerangka hukum terkait hak cipta serta menghadirkan alat sosial dan hukum untuk mengontrol fungsi dan hasil sistem AI. Saran dalam artikel ini, Pemerintah harus sadar akan urgensi besar pemberian insentif yang dibutuhkan oleh pemrogram dan pemilik AI untuk merangsang pengembangan dan investasi masa depan di bidang AI. Untuk mengakomodasi karya yang dihasilkan AI, Pemerintah perlu mendesain ulang UU Hak Cipta Indonesia agar mampu mengakomodasi masalah hak cipta, hak moral dan ekonomi, dan jangka waktu perlindungan terhadap karya kreasi AI; serta mempertimbangkan untuk mengadopsi penggunaan konsep work made for hire.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/3127895">
+                                <xmp>New Paradigm E-Learning Model Based on Artificial Intelligence: New Paradigm E-Learning Model Based on Artificial Intelligence </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/2546699"><xmp>Relita Buaton</xmp></a>; <a class="author-article" href="/author/view/454469"><xmp>Achmad Fauzi</xmp></a>; <a class="author-article" href="/author/view/5552811"><xmp>Mesra Yel</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> Journal of Artificial Intelligence and Engineering Applications (JAIEA) Vol. 2 No. 1 (2022): October 2022 </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Yayasan Kita Menulis </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="3127895" onclick="show_abstract(3127895)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://ioinformatic.org/index.php/JAIEA/article/download/116/131" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://ioinformatic.org/index.php/JAIEA/article/view/116/131" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;New+Paradigm+E-Learning+Model+Based+on+Artificial+Intelligence+New+Paradigm+E-Learning+Model+Based+on+Artificial+Intelligence&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.59934/jaiea.v2i1.116">
+                                        DOI: 10.59934/jaiea.v2i1.116                                    </a>
+                                                            </p>
+                            <div id="show_abstract3127895" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">This research concerns the application of a new paradigm learning that provides flexibility for educators to formulate learning designs and assessments according to the characteristics and needs of students. To improve the quality of education in Indonesia, the government has made various breakthroughs and most recently is a new paradigm learning system to create a Pancasila student profile that accommodates all differences in students, is open to all and provides the needs needed by each individual. Therefore an application system is needed to support learning a new paradigm based on artificial intelligence, artificial intelligence plays a role in knowing the level of abilities and needs of students and follow-up learning according to the needs and abilities of students available in online learning media. With the e-learning application, a new paradigm based on intelligence is produced by smart adaptive e-learning that can accommodate each individual or student with a background of different levels of abilities, weaknesses, talents and interests with artificial intelligence and machine learning technology approaches that will identify students with a diagnostic assessment that is used as a recommendation for planning learning according to the needs and abilities of students</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/3127897">
+                                <xmp>Model of the Independent Learning Campus Internal Quality Assurance System Program based on Artificial Intelligence: Model of the Independent Learning Campus Internal Quality Assurance System Program based on Artificial Intelligence </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/2378803"><xmp>Muhammad Zarlis</xmp></a>; <a class="author-article" href="/author/view/5552812"><xmp>Elviwani</xmp></a>; <a class="author-article" href="/author/view/254074"><xmp>Ami Dilham</xmp></a>; <a class="author-article" href="/author/view/2546699"><xmp>Relita Buaton</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> Journal of Artificial Intelligence and Engineering Applications (JAIEA) Vol. 2 No. 1 (2022): October 2022 </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Yayasan Kita Menulis </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="3127897" onclick="show_abstract(3127897)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://ioinformatic.org/index.php/JAIEA/article/download/117/130" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://ioinformatic.org/index.php/JAIEA/article/view/117/130" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Model+of+the+Independent+Learning+Campus+Internal+Quality+Assurance+System+Program+based+on+Artificial+Intelligence+Model+of+the+Independent+Learning+Campus+Internal+Quality+Assurance+System+Program+based+on+Artificial+Intelligence&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.59934/jaiea.v2i1.117">
+                                        DOI: 10.59934/jaiea.v2i1.117                                    </a>
+                                                            </p>
+                            <div id="show_abstract3127897" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Research on models of internal quality assurance systems in tertiary institutions online and digitally based on artificial intelligence in supporting the Merdeka Learning Campus Merdeka program in accordance with the cycle of determination, implementation, evaluation, control and improvement. The system is supported by an artificial intelligence approach to determine the implementation and achievement of the Merdeka Learning Campus Merdeka standard and to help universities detect early the impact of the implementation of Merdeka Learning Kampus Merdeka on the development of student competence. The implementation of the Merdeka Learning Campus Merdeka program is recorded in a database with cycles of Determination, Implementation, Evaluation, Control and Improvement to analyze compliance with the establishment, implementation, evaluation, control and improvement of standards for one cycle each year. At the evaluation stage, standard achievement will be produced whether it exceeds, is achieved or deviates to be followed up at the control and improvement stage. With this application, it helps tertiary institutions carry out the standards for the Merdeka Learning Campus Merdeka program standards to be carried out and developed according to the cycle of Determination, Implementation, Evaluation, Control and Improvement</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/3343689">
+                                <xmp>Artificial Intelligence and Ethics: Building an Artificial Intelligence System that Ensures Privacy and Social Justice </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/3829078"><xmp>Muhammad Hermansyah</xmp></a>; <a class="author-article" href="/author/view/2492573"><xmp>Ainun Najib</xmp></a>; <a class="author-article" href="/author/view/5888289"><xmp>Any Farida</xmp></a>; <a class="author-article" href="/author/view/5888290"><xmp>Rian Sacipto</xmp></a>; <a class="author-article" href="/author/view/832305"><xmp>Bagus Setya Rintyarna</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> International Journal of Science and Society Vol 5 No 1 (2023): International Journal of Science and Society (IJSOC) </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">GoAcademica Research & Publishing </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="3343689" onclick="show_abstract(3343689)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://ijsoc.goacademica.com/index.php/ijsoc/article/download/644/592" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://ijsoc.goacademica.com/index.php/ijsoc/article/view/644/592" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Artificial+Intelligence+and+Ethics+Building+an+Artificial+Intelligence+System+that+Ensures+Privacy+and+Social+Justice&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.54783/ijsoc.v5i1.644">
+                                        DOI: 10.54783/ijsoc.v5i1.644                                    </a>
+                                                            </p>
+                            <div id="show_abstract3343689" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">The term "artificial intelligence" (AI) refers to technology becoming increasingly prevalent in many facets of human life. Nevertheless, significant concerns regarding social justice and privacy in the application of AI are also being noticed. This article explores the significance of ethics in developing artificial intelligence systems that can protect individuals' privacy and promote social justice. A qualitative methodology was used for this study, which consists of a review of previous research. As a result of this research, we describe what is artificial intelligence with examples of its use, ethics with its functions, how to embed ethics into artificial intelligence technologies, including robot and machine ethics. The following is an examination of AI and ethics from the point of view of privacy and social justice. In the context of the use of AI, offer some suggestions about constructing a more moral and accountable AI system.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/3816651">
+                                <xmp>The Implication of Generative Artificial Intelligence towards Intellectual Property Rights (Examining the Multifaceted Implications of Generative Artificial Intelligence on Intellectual Property Rights) </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/6611683"><xmp>Priscilla Auleader Napitupulu</xmp></a>; <a class="author-article" href="/author/view/6611694"><xmp>Clara Alrosa Fernanda Sinaga</xmp></a>; <a class="author-article" href="/author/view/6611695"><xmp>Albert Lukas Pithel Hasugian</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> West Science Law and Human Rights Vol. 1 No. 04 (2023): West Science Law and Human Rights </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Westscience Press </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="3816651" onclick="show_abstract(3816651)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://wsj.westscience-press.com/index.php/wslhr/article/download/330/713" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://wsj.westscience-press.com/index.php/wslhr/article/view/330/713" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;The+Implication+of+Generative+Artificial+Intelligence+towards+Intellectual+Property+Rights+Examining+the+Multifaceted+Implications+of+Generative+Artificial+Intelligence+on+Intellectual+Property+Rights&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.58812/wslhr.v1i04.330">
+                                        DOI: 10.58812/wslhr.v1i04.330                                    </a>
+                                                            </p>
+                            <div id="show_abstract3816651" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Generative Artificial Intelligence (Generative AI) is transforming content creation, enabling faster and cheaper production of text, images, and more. However, it raises complex issues regarding intellectual property rights and ownership. This article explores the evolving landscape of AI-generated content, focusing on its alignment with existing intellectual property regulations. It delves into legal disputes exemplified by cases like Getty Images, INC. v. Stability AI, INC, and Doe v. Github, INC, which highlight the challenges of AI-generated content regarding intellectual property. The article also discusses the impact on the creative sector and offers recommendations, including the need for ethical guidelines, education, hybrid collaboration, public involvement, and international cooperation. Addressing these challenges is crucial to harmonize intellectual property rights and maximize the benefits of AI in content creation.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/3854093">
+                                <xmp>Islamic Religious Education Learning and Trends in the Use of Artificial Intelligence: Pembelajaran Pendidikan Agama Islam Dan Tren Penggunaan Artificial Intelligence </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/9320121"><xmp>Eneng Humaeroh</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> ASIAN: Indonesian Journal of Learning Development and Innovation Vol. 1 No. 1 (2023): ASIAN: Indonesian Journal of Learning Development and Innovation </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Institute of Educational, Research, and Community Service </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="3854093" onclick="show_abstract(3854093)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://journal.institercom-edu.org/index.php/asian/article/download/59/47" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://journal.institercom-edu.org/index.php/asian/article/view/59/47" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Islamic+Religious+Education+Learning+and+Trends+in+the+Use+of+Artificial+Intelligence+Pembelajaran+Pendidikan+Agama+Islam+Dan+Tren+Penggunaan+Artificial+Intelligence&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                            </p>
+                            <div id="show_abstract3854093" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Artificial intelligence (AI) integrated into various media has the potential to create intelligent robots that can facilitate learning, although its use requires adaptation and specific skills. AI does not replace the role of human learning but can streamline access to information, enhance knowledge, and improve the efficiency of learning. The trend of using AI in education has the potential to advance learning technology, which can impact learning outcomes, effectiveness, and innovative capabilities. However, the use of AI also affects social phenomena in education and inevitable social changes, influencing not only human behavior but also the overall social system. This study aims to uncover the phenomenon of AI in the era of digital disruption and the trends in AI usage in Islamic Religious Education (PAI) learning on campuses using a phenomenological approach based on existing literature</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/4134484">
+                                <xmp>Ethics of Artificial Intelligence: Dialectics of Artificial Intelligence Policy for Humanity </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/3625955"><xmp>Syafuddin, Khairul</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> The Eastasouth Journal of Information System and Computer Science Vol. 1 No. 03 (2024): The Eastasouth Journal of Information System and Computer Science (ESISCS) </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Eastasouth Institute </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="4134484" onclick="show_abstract(4134484)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://esj.eastasouth-institute.com/index.php/esiscs/article/download/178/199" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://esj.eastasouth-institute.com/index.php/esiscs/article/view/178/199" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Ethics+of+Artificial+Intelligence+Dialectics+of+Artificial+Intelligence+Policy+for+Humanity&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.58812/esiscs.v1i03.178">
+                                        DOI: 10.58812/esiscs.v1i03.178                                    </a>
+                                                            </p>
+                            <div id="show_abstract4134484" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Artificial Intelligence is now widely used by humans. The use of this technology is based on the view that Artificial Intelligence can make their lives easier. Many sectors have utilized this technology, including government, private, social, health, to education. Even though Artificial Intelligence is felt to have many benefits, there are perceived threats so that appropriate policies are needed. Thus, the aim of this research is to find out policies that can be recommended for the use of Artificial Intelligence that focus on humanitarian aspects. This research uses a qualitative approach to deepen the literature review that has been carried out. The results of this research show that the presence of Artificial Intelligence provides quite large benefits, especially as a technology for predicting the future. However, to regulate the use of this technology, appropriate policies are needed to avoid increasingly widespread digital crimes. In formulating Artificial Intelligence policies, humanitarian aspects need to be considered to provide appropriate protection. Especially for vulnerable groups who have low access to the use of Artificial Intelligence.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/4159401">
+                                <xmp>A Review on Attacks against Artificial Intelligence (AI) and Their Defence Image Recognition and Generation Machine Learning, Artificial Intelligence </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/9092676"><xmp>Hossain, Md. Tarek</xmp></a>; <a class="author-article" href="/author/view/9092677"><xmp>Afrin, Rumi</xmp></a>; <a class="author-article" href="/author/view/9092678"><xmp>Biswas, Mohd. Al- Amin</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> Control Systems and Optimization Letters Vol 2, No 1 (2024) </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Peneliti Teknologi Teknik Indonesia </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="4159401" onclick="show_abstract(4159401)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://ejournal.csol.or.id/index.php/csol/article/download/73/94" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://ejournal.csol.or.id/index.php/csol/article/view/73/94" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;A+Review+on+Attacks+against+Artificial+Intelligence+AI+and+Their+Defence+Image+Recognition+and+Generation+Machine+Learning+Artificial+Intelligence&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.59247/csol.v2i1.73">
+                                        DOI: 10.59247/csol.v2i1.73                                    </a>
+                                                            </p>
+                            <div id="show_abstract4159401" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">The main objective this paper is to review the adversarial assaults, data poisoning, model inversion attacks, and other methods that potentially jeopardize the integrity and dependability of AI-based image recognition and generation models. As artificial intelligence (AI) systems become more popular in numerous sectors, their vulnerability to attacks has arisen as a major worry. We focus on attacks especially targeting AI models used in picture identification and creation tasks in our review study. We investigate the wide range of assault strategies, including both traditional and more complex techniques. These attacks take use of flaws in machine learning algorithms, frequently resulting in misclassification, falsified picture production, or unauthorized access to sensitive data. We survey numerous defense strategies developed by scholars and practitioners to overcome these difficulties. Among these defenses are adversarial training, robust feature extraction, input sanitization, and model distillation. We explore the usefulness and limitations of each protection mechanism, highlighting the importance of a comprehensive approach that integrates numerous techniques to improve the resilience of AI models. Furthermore, we investigate the possible impact of these attacks on real-world applications such as driverless vehicles, medical imaging systems, and security monitoring, emphasizing the threats to public safety and privacy. The study also covers the legislative and ethical aspects surrounding AI security, as well as the responsibilities of AI developers in establishing adequate defense measures. This analysis highlights the critical need for continued research and collaboration to develop more secure AI systems that can withstand sophisticated attacks. As AI evolves and integrates into important areas, a concerted effort must be made to strengthen these systems' resilience against hostile threats and assure their responsible deployment for the benefit of society.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                            <div class="article-item">        
+                            <a class="title-article" href="/documents/detail/4167641">
+                                <xmp>Bagaimana Artificial Intelligence mengubah Lanskap Industri Kreatif: Disrupsi Artificial Intelligence dari Kacamata Praktisi Industri Kreatif </xmp>
+                            </a>
+                            <a class="author-article" href="/author/view/7121369"><xmp>Meiry Ramdani Anwar</xmp></a>; <a class="author-article" href="/author/view/3921571"><xmp>Angela Caroline</xmp></a>; <a class="author-article" href="/author/view/3417462"><xmp>Yoke Pribadi Kornarius</xmp></a>; <a class="author-article" href="/author/view/7121370"><xmp>Triningtyas Elisabeth Putri Gusti</xmp></a>; <a class="author-article" href="/author/view/2574552"><xmp>Agus Gunawan</xmp></a>                            <br>
+                            <xmp class="subtitle-article"> eCo-Buss Vol. 7 No. 1 (2024): eCo-Buss </xmp>
+                            <br>
+                            <i class="subtitle-article">Publisher : </i><xmp class="subtitle-article">Komunitas Dosen Indonesia </xmp>
+                            <p class="action-article">
+                                <a class="btn_show_abstract title-citation" target="4167641" onclick="show_abstract(4167641)"> Show Abstract</a>
+                                | <a class="title-citation" href="https://jurnal.kdi.or.id/index.php/eb/article/download/1284/773" target="_blank">
+                                    <i class="download icon"></i> Download Original
+                                </a>
+                                | <i>
+                                    <a class="title-citation" href="https://jurnal.kdi.or.id/index.php/eb/article/view/1284/773" target="_blank">
+                                        Original Source
+                                    </a>
+                                </i>
+                                | <i>
+                                    <a class="title-citation" href="http://scholar.google.com/scholar?q=%2Bintitle%3A&quot;Bagaimana+Artificial+Intelligence+mengubah+Lanskap+Industri+Kreatif+Disrupsi+Artificial+Intelligence+dari+Kacamata+Praktisi+Industri+Kreatif&quot;" target="_blank">
+                                        Check in Google Scholar
+                                    </a>
+                                </i>
+                                                                                                    
+                                    | <a class="title-citation" target="_blank" href="https://doi.org/10.32877/eb.v7i1.1284">
+                                        DOI: 10.32877/eb.v7i1.1284                                    </a>
+                                                            </p>
+                            <div id="show_abstract4167641" class="article-abstract">
+                                <div class="ui message tiny basic">
+                                    <h4 class="ui header">
+                                        <b>Abstract</b>
+                                    </h4>
+                                    <div class="abstract-article">
+                                        <xmp class="abstract-article">Revolusi pada big data dan perkembangan kapasitas komputasi membawa dampak terhadap berbagai industri, termasuk pada industri kreatif. Industri kreatif mempunyai dampak yang cukup signifikan terhadap laju Produk Domestik Bruto (PDB) yang merupakan faktor yang berkontribusi secara signifikan terhadap pertumbuhan ekonomi negara. Hal ini membuat industri kreatif menjadi salah satu alternatif kuat untuk membangun kerajaan bisnis maupun sebagai pilihan sektor yang menarik untuk digeluti di dunia profesional. Namun, di era digital dimana penggunaan artificial intelligence (AI) sudah semakin marak, para penggiat di industri kreatif mulai mendapat tantangannya tersendiri. Hal ini dikarenakan para penggiat di industri kreatif dihadapkan pada kenyataan bahwa teknologi dapat menjadi ancaman untuk pekerjaan mereka juga dapat menjadi alat bantu yang dapat mendukung pekerjaan mereka. Penelitian ini hendak mengetahui bagaimana perkembangan AI mempengaruhi sikap pelaku di industri kreatif. Theory of Planned Behavior digunakan sebagai dasar untuk memahami perilaku yang muncul akibat disrupsi AI. Metode campuran digunakan agar dapat memberikan asumsi secara menyeluruh atas akibat dari disrupsi AI, sekaligus juga bisa mendapatkan gambaran pemahaman secara holistik dari kacamata penggiat industri kreatif yang diwakili oleh beberapa responden dari berbagai bidang keahlian melalui wawancara terstruktur. Responden wawancara yang bekerja di industri kreatif, menyatakan bahwa kehadiran AI banyak membantu proses kreatif mereka sampai pada tahapan tertentu. Yakni, AI dipergunakan sebagai sarana triangulasi, referensi untuk pengembangan ide orisinil, membaca trend terkini, serta sebagai alat bantu ketika dihadapkan pada kebutuhan dengan waktu yang terbatas.</xmp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                                                
+                                    <div class="ui two column stackable grid">
+                        <div class="column">
+                            <p class="pagination-info">
+                                Page 1 of 1215                                | Total Record : 12148 
+                            </p>
+                        </div>
+                        <div class="column">
+                                                            <div class="page-column"  style="float: right !important;">
+                                    <a href="?page=1&q=artificial intelligence" class="ui mini icon button">
+                                        <i class="angle double left icon"></i>
+                                    </a>                                
+                                                                            <a href="?page=1&q=artificial intelligence" class="ui mini icon button orange">
+                                            &nbsp;1&nbsp;
+                                        </a>
+                                                                            <a href="?page=2&q=artificial intelligence" class="ui mini icon button ">
+                                            &nbsp;2&nbsp;
+                                        </a>
+                                                                            <a href="?page=3&q=artificial intelligence" class="ui mini icon button ">
+                                            &nbsp;3&nbsp;
+                                        </a>
+                                                                            <a href="?page=4&q=artificial intelligence" class="ui mini icon button ">
+                                            &nbsp;4&nbsp;
+                                        </a>
+                                                                            <a href="?page=5&q=artificial intelligence" class="ui mini icon button ">
+                                            &nbsp;5&nbsp;
+                                        </a>
+                                                                
+                                    <a href="?page=1215&q=artificial intelligence" class="ui mini icon button">
+                                        <i class="angle double right icon"></i>
+                                    </a>
+                                </div>                        
+                                                    </div>
+                    </div>
+                    <br><br>
+                            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<script>
+    $( function() {
+        $("#slider-range" ).slider({
+            range: true,
+            min: 1945,
+            max: 2024,
+            values: [ 1945, 2024 ],
+            slide: function( event, ui ) {
+                $("#from").val(ui.values[ 0 ]);
+                $("#to").val(ui.values[ 1 ]);
+            }
+        });
+        $("#from").val( $( "#slider-range" ).slider( "values", 0 ));
+        $("#to").val($( "#slider-range" ).slider( "values", 1 ));
+    });
+</script><!-- </div> -->
+</main>
+
+<div class="links-box">
+    <ul>
+        <li><a href="https://sinta.kemdiktisaintek.go.id" target="_blank">Sinta</a></li>
+        <li><a title="Basis Informasi Penelitian dan Pengabdian kepada Masyarakat" href="https://bima.kemdiktisaintek.go.id" target="_blank">Bima</a></li>
+        <li><a title="Akreditasi Jurnal Nasional" href="https://arjuna.kemdiktisaintek.go.id" target="_blank">Arjuna</a></li>
+        <li><a title="Pangkalan Data Pendidikan Tinggi Ristekdikti" href="https://pddikti.kemdiktisaintek.go.id" target="_blank">PDDIKTI</a></li>
+        <li><a title="Data Riset dan Pengembangan Ristekdikti" href="https://dikti.kemdiktisaintek.go.id/" target="_blank">Risbang</a></li>
+        <li><a title="The Largest Abstract and Citation Database of Peer-Reviewed Literature" href="https://www.scopus.com" target="_blank">Scopus</a></li>
+        <li><a title="Repositori Tugas Akhir Mahasiswa" href="https://rama.kemdiktisaintek.go.id/" target="_blank">Rama</a></li>
+    </ul>
+</div>
+<footer class="ui grid equal width footer">
+    <div class="clearfix"></div>
+    <div class="column">
+        <img src="/assets/img/logo_dikbud.png" />
+        <div class="footer-company">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi </div>
+        <div class="footer-subcompany">(The Ministry of Education, Culture, Research, and Technology)</div>
+        <div class="footer-copyright">&copy; 2018</div>
+    </div>
+    <div class="column"></div>
+</footer>
+<!-- UI KIT -->
+
+
+
+
+<script>
+    setTimeout(function() {
+        // $('#flash_message').slideUp( 300, "linear" );
+        $('#flash_message').fadeOut( "slow");
+    }, 2000);
+</script>
+<!-- AUTOSEARCH BUKU-->
+<script>
+    $(function() {
+        $("#suggest_pub").autocomplete({
+            source: "/suggest/findPublisher",
+            select: function( event, ui ) {
+                event.preventDefault();
+                $("#suggest_pub").val(ui.item.value);
+            }
+        });
+    });
+</script>
+<!-- END AUTOSEARCH BUKU-->
+
+
+<script type="text/javascript">
+    $('.ui.checkbox').checkbox();
+    $('select.dropdown').dropdown();
+    $('.ui.dropdown').dropdown();
+    $('.top.menu .item').tab();
+
+    $(document).ready(function () {
+
+        $("#sort").change(function () {
+            var page = 1;
+            // $("#sort").val(page);
+            $("#form_sort").submit();
+        });
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_journal").submit();
+        });        
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_alphabeth").submit();
+        });
+
+        $("#select_item").change(function () {
+            var page = 1;
+            $("#page").val(page);
+            $("#form_search").submit();
+        });
+
+        $('#page').keydown(function () {
+            var key = e.which;
+            if (key == 13) {
+                $('#form_journal').submit();
+            }
+        });
+
+        $('#form_journal').keydown(function () {
+            var key = e.which;
+            if (key == 13) {
+                // As ASCII code for ENTER key is "13"
+                $('#form_journal').submit(); // Submit form code
+            }
+        });
+
+        $('.demo.menu .item').tab({history: false});
+
+        $('.area-cloud a').tagcloud();
+
+    });
+
+    $('.ui.top.attached.tabular.menu .item').tab({history: false});
+
+    $.fn.tagcloud.defaults = {
+        size: {start: 9, end: 30, unit: 'pt'},
+        color: {start: '#444', end: '#ed462f'}
+    };
+
+    function show_abstract(id){
+        $('#show_abstract'+id).slideToggle();
+    }
+
+    $(document).ready(function () {
+        $('#adv-btn').on('click', function () {
+            $('#adv-box').slideToggle('slow');
+            $('#form-journal').slideToggle('slow');
+        });
+
+        $('#adv-less').on('click', function () {
+            $('#adv-box').slideToggle('slow');
+            $('#form-journal').slideToggle('slow');
+        });
+    });
+
+
+
+</script>
+
+</body>
+</html>
